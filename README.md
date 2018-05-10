@@ -1,3 +1,5 @@
+
+
 ## Starting this app locally
 
 Start by installing front and backend dependencies. While in this directory, run the following commands:
@@ -7,29 +9,19 @@ yarn install
 cd client
 yarn install
 cd ..
-``
+
 
 After both installations complete, run the following command in your terminal:
 
-```
+
 yarn start
-```
-
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
-
-1. Build the React app for production by running the following command:
 
 ```
-yarn build
-```
-> Note: A yarn build will be required to register any new Post requests from any front-end JavaScript to to prevent any proxy server errors.
 
-2. Add and commit all changes to git
 
-3. Push to Heroku
 
-If all previous steps were followed correctly, your application should be deployed to Heroku!
+
+At the moment, the app is fully functional, able to edit current client amount owed, along with email, and name. 
+
+This is a barebones rendering, very limited styling, but ability to manage client data. There is no persistent data as of yet.
+

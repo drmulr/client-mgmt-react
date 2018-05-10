@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import Header from './Header';
 import List from './List';
-import Footer from './Footer';
 import clients from '../sample-clients';
 
 class App extends Component {
@@ -15,14 +14,25 @@ class App extends Component {
       this.setState({ clients: clients });
     };
 
+    updateClient = (key, updatedClient) => {
+      //This is coming from EditClientForm's handleChange()
+      //1. Take a copy of current state
+      const clients = {...this.state.clients};
+      //2. Update that state
+      clients[key] = updatedClient;
+      //3. Setting it to state
+      this.setState({ clients }); 
+    }
+
   render() {
     return (
       <div className="App">
         <Header />
         <List 
+          updateClient={this.updateClient}
           loadSampleClients={this.loadSampleClients}
-          clients={this.state.clients}/>
-        <Footer />
+          clients={this.state.clients}
+          />
       </div>
     );
   }

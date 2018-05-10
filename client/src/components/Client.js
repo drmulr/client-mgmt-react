@@ -10,7 +10,7 @@ class Client extends React.Component {
           <div>
                 <p><strong>Client Name:</strong> {name}</p>
                 <p><strong>Email:</strong> {email}</p>
-                <p><strong>Outstanding Balance:</strong> {formatDebt(debt)}</p>
+                <p className="bottom"><strong>Outstanding Balance:</strong> {formatDebt(debt)}</p>
           </div>
         );
       }

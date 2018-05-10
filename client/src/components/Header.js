@@ -1,10 +1,13 @@
 import React from "react";
+import './Header.css';
 
 
 const Header = props => (
-    <header className="top">
-      <h1>Fatt - Client Invoice</h1>
-    </header>
+  <div className="nav">
+      <ul>
+        <li className="home"><a href="#">Fatt Invoice Management</a></li>
+      </ul>
+    </div>
   );
 
 
