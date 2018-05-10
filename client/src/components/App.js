@@ -3,14 +3,27 @@ import '../App.css';
 import Header from './Header';
 import List from './List';
 import Footer from './Footer';
+import clients from '../sample-clients';
+import Client from './Client';
 
 class App extends Component {
-  render() {
 
+    state = {
+      clients: {}
+    };
+
+    loadSampleClients = () => {
+      this.setState({ clients: clients });
+    };
+
+  render() {
     return (
       <div className="App">
         <Header />
-        <List />
+        <List loadSampleClients={this.loadSampleClients}/>
+        <ul>
+          {Object.keys(this.state.clients).map(key => <Client key={key} details={this.state.clients[key]}/>)}
+        </ul>
         <Footer />
       </div>
     );

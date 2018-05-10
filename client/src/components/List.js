@@ -3,7 +3,11 @@ import React from "react";
 class List extends React.Component {
     render() {
         return (
-          <h1>List</h1>
+          <div>
+            <h1>Client Invoice List</h1>
+
+            <button onClick={this.props.loadSampleClients}>Load Sample Clients</button>
+          </div>
         );
       }
 }
