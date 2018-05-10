@@ -4,7 +4,6 @@ import Header from './Header';
 import List from './List';
 import Footer from './Footer';
 import clients from '../sample-clients';
-import Client from './Client';
 
 class App extends Component {
 
@@ -20,10 +19,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <List loadSampleClients={this.loadSampleClients}/>
-        <ul>
-          {Object.keys(this.state.clients).map(key => <Client key={key} details={this.state.clients[key]}/>)}
-        </ul>
+        <List 
+          loadSampleClients={this.loadSampleClients}
+          clients={this.state.clients}/>
         <Footer />
       </div>
     );

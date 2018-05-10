@@ -1,4 +1,5 @@
 import React from "react";
+import { formatDebt } from '../helpers';
 
 class Client extends React.Component {
     render() {
@@ -7,9 +8,9 @@ class Client extends React.Component {
       const debt = this.props.details.debt;
         return (
           <div>
-                <h4>Client Name: {name}</h4>
-                <h4>Email: {email}</h4>
-                <h4>Outstanding Balance: {debt}</h4>
+                <p><strong>Client Name:</strong> {name}</p>
+                <p><strong>Email:</strong> {email}</p>
+                <p><strong>Outstanding Balance:</strong> {formatDebt(debt)}</p>
           </div>
         );
       }
