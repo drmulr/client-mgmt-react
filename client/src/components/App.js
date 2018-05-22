@@ -24,9 +24,15 @@ class App extends Component {
       this.setState({ clients }); 
     }
 
+    sortAscending = () => {
+      alert("sortAscending works!");
+    };
+
+    
+
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <Header />
         <List 
           updateClient={this.updateClient}

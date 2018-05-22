@@ -18,7 +18,9 @@ class List extends React.Component {
         <div className="static">
           <ul>
             {Object.keys(this.props.clients).map(key => (
+
               <Client key={key} details={this.props.clients[key]} />
+            
             ))}
           </ul>
         </div>
