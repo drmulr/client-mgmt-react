@@ -10,8 +10,7 @@ html {
 }
 
 body {
-background-image: url("./assets/images/round.png"),
-  linear-gradient(110deg, #f93d66, #6d47d9);
+background-image: url("./assets/images/round.png");
 background-size: 340px, auto;
 min-height: calc(100vh - 100px);
 margin: 50px;
@@ -27,86 +26,6 @@ letter-spacing: -1px;
   height: 40px;
   top: 0;
 } 
-
-.header-content {
-  max-width: 930px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main-nav > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.main-nav > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Main Content CSS */
-/* 
-.main {
-  max-width: 930px;
-  margin: 4rem auto;
-  border: 3px dashed red;
-}
-
-.instructions {
-  border: 3px dashed blue;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-
-.data-load {
-  justify-self: center;
-  display: flex;
-  align-content: center;
-}
-
-.main-data {
-  border: 3px dashed blue;
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 28px;
-} */
-
-
-
-
-/* .App {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-.container {
-  margin: auto;
-  width: 80%;
-  border: 3px solid green;
-  padding: 10px;
-}
-
-.static {
-  text-align: left;
-}
-
-.client-edit-form {
-  margin: auto;
-} */
 
 
 

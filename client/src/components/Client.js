@@ -7,11 +7,13 @@ class Client extends React.Component {
       const email = this.props.details.email;
       const debt = this.props.details.debt;
         return (
-          <div>
-                <p><strong>Client Name:</strong> {name}</p>
-                <p><strong>Email:</strong> {email}</p>
-                <p className="bottom"><strong>Outstanding Balance:</strong> {formatDebt(debt)}</p>
-          </div>
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">{name}</h5>
+              <h6 className="card-subtitle mb-2 text-muted">{email}</h6>
+              <p className="card-text">{formatDebt(debt)}</p>
+            </div>
+        </div>
         );
       }
 }

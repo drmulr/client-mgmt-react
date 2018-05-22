@@ -32,13 +32,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App container">
-        <Header />
-        <List 
-          updateClient={this.updateClient}
-          loadSampleClients={this.loadSampleClients}
-          clients={this.state.clients}
-          />
+      <div>
+          <Header />
+          <div className="App container">
+            <List 
+              updateClient={this.updateClient}
+              loadSampleClients={this.loadSampleClients}
+              clients={this.state.clients}
+              />
+          </div>
       </div>
     );
   }
