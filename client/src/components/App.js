@@ -25,7 +25,26 @@ class App extends Component {
     }
 
     sortAscending = () => {
-      alert("sortAscending works!");
+      const clientValues = Object.values(this.state.clients);
+
+      function compare(a, b) {
+        // Use toUpperCase() to ignore character casing
+        const clientA = a.debt;
+        const clientB = b.debt;
+      
+        let comparison = 0;
+        if (clientA > clientB) {
+          comparison = 1;
+        } else if (clientA < clientB) {
+          comparison = -1;
+        }
+        return comparison * -1;
+      }
+      
+      clientValues.sort(compare);
+      console.log(clientValues)
+
+      this.setState({ clients: clientValues });
     };
 
     
@@ -39,6 +58,7 @@ class App extends Component {
               updateClient={this.updateClient}
               loadSampleClients={this.loadSampleClients}
               clients={this.state.clients}
+              sortAscending={this.sortAscending}
               />
           </div>
       </div>

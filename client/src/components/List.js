@@ -28,17 +28,12 @@ class List extends React.Component {
           
             <div className="static col-lg-6">
               <h3>Review Client Data</h3>
-                <button onClick={this.props.loadSampleClients}>
+                <button onClick={this.props.sortAscending}>
                   Sort by Debt
-                </button>
-                <button onClick={this.props.loadSampleClients}>
-                  Sort Alphabetically
                 </button>
               <ul>
                 {Object.keys(this.props.clients).map(key => (
-
-                  <Client key={key} details={this.props.clients[key]} />
-                
+                  <Client key={key} details={this.props.clients[key]} />              
                 ))}
               </ul>
             </div>
