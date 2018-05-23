@@ -1,4 +1,12 @@
 
+:root {
+  --yellow: #ffc600;
+  --black: #222222;
+  --blue: #1C5D99;
+  --green-blue: #639FAB;
+  --pale: #BBCDE5;
+}
+
 /* Header CSS */
 
 html {
@@ -10,12 +18,11 @@ html {
 }
 
 body {
-background-image: url("./assets/images/round.png");
-background-size: 340px, auto;
-min-height: calc(100vh - 100px);
-margin: 50px;
-background-attachment: fixed;
-letter-spacing: -1px;
+  background-image: url("./assets/images/round.png");
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  background-attachment: fixed;
+  letter-spacing: -1px;
 }
 
 .header {
@@ -27,5 +34,50 @@ letter-spacing: -1px;
   top: 0;
 } 
 
+.nav ul {
+  list-style: none;
+  background-color: #EEEEEE;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: .3s background-color;
+}
+a.active {
+  background-color: #fff;
+  color: #444;
+}
+
+/* Main CSS */
+
+.static-client-list {
+  list-style: none;
+  margin-right: 0px;
+  background-color: var(--pale);
+}
+
+.instructions {
+  background-color: var(--green-blue);
+}
+
+h3 {
+  background-color: var(--yellow);
+}
+
+.card {
+  background-color: var(--pale);
+}
 
 

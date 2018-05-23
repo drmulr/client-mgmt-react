@@ -13,7 +13,7 @@ class Client extends React.Component {
               <h6 className="card-subtitle mb-2 text-muted">{email}</h6>
               <p className="card-text">{formatDebt(debt)}</p>
             </div>
-        </div>
+          </div>
         );
       }
 }

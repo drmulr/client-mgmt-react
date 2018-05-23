@@ -9,13 +9,16 @@ class List extends React.Component {
 
         <div className="instructions row">
           <div className="col-lg-8 text-center m-auto">
-            <p>Please load sample clients with button below. The admin panel (top table) is used to edit the data, which is then udpated and displayed below. There is limited formatting, but full functionality. </p>
+            <p>Please load sample clients to begin. The Admin Panel (Edit Client Data) is used to update customer data. It is then udpated and displayed below for review.</p>
           </div>
         </div>
         
         <div className="row">
-            <div className="edit col-lg-6">
+            <div className="edit col-lg-6 mr-auto">
               <h3>Edit Client Data</h3>
+              <button className="btn btn-outline-success" onClick={this.props.loadSampleClients}>
+                Load Sample Clients
+              </button>
               {Object.keys(this.props.clients).map(key => (
                 <EditClientForm
                   key={key}
@@ -28,21 +31,22 @@ class List extends React.Component {
           
             <div className="static col-lg-6">
               <h3>Review Client Data</h3>
-                <button onClick={this.props.sortAscending}>
-                  Sort by Debt
+                <button data-sort="down" className="btn btn-outline-dark" onClick={this.props.sortDescending}>
+                  Debt <span role="img" alt="down-arrow">👇</span>
                 </button>
-              <ul>
+                <button className="btn btn-outline-dark" onClick={this.props.sortAbc}>
+                  Name <span role="img" alt="abc">🔤</span>
+                </button>
+              <div>
                 {Object.keys(this.props.clients).map(key => (
                   <Client key={key} details={this.props.clients[key]} />              
                 ))}
-              </ul>
+              </div>
             </div>
         </div>
         
 
-        <button onClick={this.props.loadSampleClients}>
-          Load Sample Clients
-        </button>
+
       
       </div>
     );
